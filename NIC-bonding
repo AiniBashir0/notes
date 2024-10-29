@@ -1,0 +1,24 @@
+ifconfig , ip a
+cd /etc/sysconfig/network-scripts/
+cp ifcfg-ens192 ifcfg-ens224
+uuidgen ens224 (universally unique identifier)
+vim ifcfg-ens224
+nmcli connection show
+nmcli device up ens224
+nmcli connection show
+systemctl restart NetworkManager
+nmcli connection add type team con-name team0 ifname team0 ipv4.addresses 192.168.1.202/24 ipv4.gateway 192.168.1.1 ipv4.dns 192.168.1.1 ipv4.method manual autoconnect yes config '{"runner": {"name": "activebackup"}}'
+nmcli device up team0
+nmcli connection add type team-slave ifname ens192 master team0
+nmcli connection add type team-slave ifname ens224 master team0
+teamdctl team0 state
+nmcli device down ens192
+nmcli device down ens224
+man teamd.conf
+
+NIC (Network Interface Card) bonding, also known as network interface bonding, teaming or link aggregation, combines multiple physical network interfaces into a single logical interface.
+
+- activebackup: One interface is active; others are backups.
+- loadbalance: Distributes traffic across interfaces.
+- broadcast: Broadcasts traffic on all interfaces.
+- roundrobin: Distributes outgoing traffic across interfaces
