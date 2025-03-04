@@ -1,0 +1,19 @@
+## Note: memory should be 4GB and don't run as root
+- sudo yum -y install epel-release
+- sudo yum -y update
+- sudo reboot
+- sudo yum -y install apt-transport-https ca-certificates curl software-properties-comm dnf-plugins-core
+- sudo dnf install dnf-plugins-core
+- sudo yum install -y yum-utils
+- sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+- sudo yum -y install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin --allowerasing
+- sudo systemctl enable docker --now
+- sudo usermod -aG docker $USER && newgrp docker
+- sudo curl -LO https://dl.k8s.io/release/v1.31.0/bin/linux/amd64/kubectl
+- sudo chmod +x kubectl
+- sudo mv kubectl /usr/local/bin/
+- sudo curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+- sudo install minikube-linux-amd64 /usr/local/bin/minikube
+- /usr/local/bin/minikube start --driver=docker
+- minikube status
+- kubectl get nodes
