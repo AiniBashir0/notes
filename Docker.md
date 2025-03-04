@@ -1,0 +1,36 @@
+- yum -y remove docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine podman runc
+- yum install -y yum-utils
+- yum-config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
+- yum -y install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+- systemctl start docker && sudo systemctl enable docker
+- docker pull httpd
+- docker ps
+- docker images
+- docker run -d --name dmz-web -p 8080:80 --restart always httpd
+- firewall-cmd --add-port=8080/tcp --permanent
+- firewall-cmd --add-port=8080/udp --permanent
+- firewall-cmd --reload
+- docker exec -it dmz-web /bin/bash
+- cd htdocs--> ls--> cat index.html  echo "line2" >> index.html
+- exit
+- web browser- 192.168.0.101:8080
+
+### Database: Image: Rocky Linux 
+- My- sql (structure query language) 
+- 3306 -port of database
+- Data base is organized collection of data that allows easy access(retrieval and manipulation) and manage - in form of tables (rows and columns)
+- Must be secured with password 
+- Use Semi colon always 
+- *- all
+- Integer: 1,2 3 4 5 only- no alphabets (data type)
+- Var characters- limit of characters  - varchar
+- -v -  volume to save data
+- docker run -d --name dmz-db -p 3306:3306 --restart=always -e MYSQL_ROOT_PASSWORD=hello123 -e MYSQL_DATABASE=wordpress -e MYSQL_USER=wordprressuser -e MYSQL_PASSWORD=hello123 -v mysql_data:/var/lib/mysql mysql:latest
+- docker ps
+- docker exec -it dmz-db mysql -uroot -phello123
+- show databases;
+- use wordpress
+- create table personal_info (personalid int, last_name varchar(255), first_name varchar(255), address varchar(255), city varchar (255), state varchar (255));
+- insert into personal_info (personalid, last_name, first_name, address, city, state) values (1001, 'Bashir', 'Aini', '123 xyz strret', 'nigara falls', 'ny');
+- select * from personal_info
+- -dit-doesn't occupy the server
