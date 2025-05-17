@@ -8,3 +8,4 @@
 - create first-server.tf file
 - Terraform init
 - Terraform apply
+- [Terraform](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance.html)
