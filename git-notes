@@ -1,0 +1,15 @@
+# How to create GitHub account:
+- GitHub sign up
+- Open VM and run the machine > yum -y install git > cd .ssh/ > cat id_rsa.pub > copy ID
+- Profile settings > SSH and GP keys > add SSH > name and paste key
+- Create repo on github > public > Checkamrk "Add README file"
+- Go to code (in green color) > SSH > Copy id
+- On vm server- run--- git clone git@github.com:mahmadg/linuxdmz.git
+- git config --global user.name "username"
+- git config --global user.email "email id"
+- create a file
+- git add .
+- git commit -m "upgrading to new version"
+- git push ( server will push the fil to github)
+
+- git pull (server will pull the file from github)
