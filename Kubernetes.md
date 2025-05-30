@@ -1,0 +1,106 @@
+# Kubernetes
+- kubectl get pods -n apple
+- kubectl delete pods apple-pod
+- kubectl delete pods apple-pod -n apple
+- kubectl delete pods apple-pod
+- kubectl get pods -n apple
+- kubectl get pods
+- kubectl delete pods httpd-mysql-deployment-fd8df7777-47t24
+- kubectl get pods
+- kubectl get pods -n apple
+- kubectl get pods -n orange
+- kubectl delete pods orange-db -n orange
+- kubectl get pods -n orange
+- kubectl get pods
+- kubectl get namespace
+- kubectl get pods
+- kubectl get deployment
+- kubectl get deployment -n orange
+- kubectl get deployment -n apple
+- kubectl create deployment dply1 --image=httpd --replicasets=2
+- kubectl create deployment dply1 --image=httpd --replicaset=2
+- kubectl create deployment dply1 --image=httpd --replicas=2
+- kubectl get deployment -n apple
+- kubectl get deployment
+- kubectl get pods
+- kubectl delete deployment dply1
+- kubectl get pods
+- kubectl delete pods
+- kubectl delete orange1-web
+- kubectl delete pods orange1-web
+- kubectl apply -f httpmysql.yml
+- kubectl get deployment
+- kubectl delete deployment httpd-mysql-deployment
+- kubectl apply -f httpmysql.yml
+- kubectl apply -f apple.yml
+- kubectl get pods -n apple
+- kubectl delete pods -n apple
+- kubectl delete pods apple-pod -n apple
+- kubectl get pods -n apple
+- kubectl get deployment
+- kubectl get deployment -n orange
+- kubectl get deployment -n apple
+- kubectl get namespace
+- kubectl get pods -n orange
+- kubectl run orange-web --image=httpd:latest --namespace=orange --port=80
+- kubectl get pods -n orange
+- kubectl get pods -n orange -o wide
+- kubectl run orange-web --image=httpd:latest --namespace=orange --port=80 --targetPort=8080
+- kubectl run dmz-web --image=httpd:latest --port=8080
+- kubectl get pods
+- kubectl port-forward dmz-web 8080:8080
+- kubectl get pods
+- kubectl get pods -o wide
+- kubectl port-forward dmz-web 8080:8080
+- kubectl get pods
+- kubectl get namespace
+- kubectl get pods -n orange
+- kubectl get pods -n apple
+- kubectl create namespace ny
+- kubectl get namespace
+- kubectl get pod -n ny
+- kubectl run dmz-web --image=httpd --port=80
+- kubectl get pods
+- kubectl delete pods dmz-web
+- kubectl get pods
+- kubectl create deployment dmz-web --image=httpd --port=80 --replicas=3
+- kubectl get pods
+- kubectl get deployment
+- kubectl get pods
+- kubectl get pods
+- kubectl delete pods dmz-web-67cf5b5fdd-b9ppj
+- kubectl get pods
+- kubectl edit deployment dmz-web
+- kubectl get pods
+- kubectl edit deployment dmz-web
+- kubectl get pods
+- kubectl scale deployment dmz-web --replicas=5
+- kubectl get pods
+- kubectl scale deployment dmz-web --replicas=2
+- kubectl get pods
+- kubectl get pods
+- kubectl get pods -n orange
+- kubectl delete pods orange-web-f4bf75895-78wwr
+- kubectl delete pods orange-web -n orange
+- kubectl get pods -n orange
+- kubectl delete pods orange-web-f4bf75895-78wwr -n orange
+- kubectl run dmz-web --namespace=orange --image=nginx --port=8080
+- kubectl get pods -n orange
+- kubectl delete pods dmz-web
+- kubectl delete pods dmz-web -n orange
+- kubectl delete deployment orange-web
+- kubectl delete deployment orange-web -n orange
+- kubectl get pods -n orange
+- kubectl get pods -n apple
+- kubectl get pods
+- kubectl get deployment
+- kubectl delete depoyment dmz-web
+- kubectl delete deployment dmz-web
+- kubectl get deployment
+- kubectl get namespace
+- kubectl delete namesapce ny
+- kubectl delete namespace ny
+- kubectl get namespace
+- kubectl delete namespace orange
+- kubectl delete namespace apple
+- kubectl get namespace
