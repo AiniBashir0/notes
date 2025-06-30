@@ -14,4 +14,14 @@
 - Terraform apply
 - [Terraform](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance.html)
 
-- 
+## Registry
+
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "~> 4.0"
+    }
+  }
+}
+
